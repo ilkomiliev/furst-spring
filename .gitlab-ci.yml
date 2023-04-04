@@ -36,6 +36,8 @@ variables:
     -DinstallAtEnd=true
     -DdeployAtEnd=true
 
+  DS_JAVA_VERSION: 11
+
 # This template uses the latest Maven 3 release, e.g., 3.8.6, and OpenJDK 8 (LTS)
 # for verifying and deploying images
 # Maven 3.8.x REQUIRES HTTPS repositories.
@@ -81,3 +83,4 @@ deploy:jdk11:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 include:
 - template: Security/SAST.gitlab-ci.yml
+- template: Security/Dependency-Scanning.gitlab-ci.yml
