@@ -79,3 +79,5 @@ deploy:jdk11:
   only:
     variables:
       - $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+include:
+- template: Security/SAST.gitlab-ci.yml
