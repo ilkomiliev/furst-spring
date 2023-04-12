@@ -22,4 +22,10 @@ public class DemoApplicationTests {
 		String body = this.restTemplate.getForObject("/", String.class);
 		assertThat(body).isEqualTo("Spring is here!");
 	}
+
+	@Test
+	public void helloResponse() {
+		String body = this.restTemplate.getForObject("/hello?name=World", String.class);
+		assertThat(body).isEqualTo("Hello World");
+	}
 }
