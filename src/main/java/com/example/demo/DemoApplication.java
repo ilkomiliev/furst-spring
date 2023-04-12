@@ -12,6 +12,10 @@ public class DemoApplication {
 	String home() {
 		return "Spring is here!";
 	}
+	@GetMapping("/hello")
+	String hello(@RequestParam String name) {
+		return "Hello " + name;
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
