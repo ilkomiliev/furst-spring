@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageTool: 'JaCoCo'
-    classFilesDirectories: 'target/classes'
-    srcDirectories: 'src/main/java'
+    codeCoverageToolOption: 'JaCoCo'
+    codeCoverageClassFilesDirectories: 'target/classes'
+    codeCoverageSourceDirectories: 'src/main/java'
     goals: 'package'
