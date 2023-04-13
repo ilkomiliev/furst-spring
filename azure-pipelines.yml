@@ -24,3 +24,11 @@ steps:
     codeCoverageClassFilesDirectories: 'target/classes'
     codeCoverageSourceDirectories: 'src/main/java'
     goals: 'package'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(6e8cc58a-23e7-480d-87d2-eda8ae44abb8)'
+    appType: 'webAppLinux'
+    appName: 'furst-spring'
+    package: '$(System.DefaultWorkingDirectory)/**/target/*.jar'
+    runtimeStack: 'JAVA|17-java17'
